@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="//unpkg.com/bootstrap@3.3.7/dist/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="//unpkg.com/bootstrap-select@1.12.4/dist/css/bootstrap-select.min.css" type="text/css" />
+    <link rel="stylesheet" href="//unpkg.com/bootstrap-select-country@4.0.0/dist/css/bootstrap-select-country.min.css" type="text/css" />
+   
+    <script src="//unpkg.com/jquery@3.4.1/dist/jquery.min.js"></script> 
+    <script src="//unpkg.com/bootstrap@3.3.7/dist/js/bootstrap.min.js"></script> 
+    <script src="//unpkg.com/bootstrap-select@1.12.4/dist/js/bootstrap-select.min.js"></script> 
+    <script src="//unpkg.com/bootstrap-select-country@4.0.0/dist/js/bootstrap-select-country.min.js"></script> 
+
+    <link rel="stylesheet" href="index.css" />
+</head>
+
+<body>
+    <div class="container">
+        <form id="myform">
+            <h1>DOM Manipulation with Forms</h1>
+            <br>
+            <div class="particulars">
+                <label for="name1">First Name:</label>
+                <input id="name1" type="text" placeholder="First Name" />
+                <label for="name2">Last Name:</label>
+                <input id="name2" type="text" placeholder="Last Name" />
+                <label for="address">Address: </label>
+                <input id="address" type="text" />
+                <label for="pincode">Pincode:</label>
+                <input id="pincode" type="number" placeholder="Enter the Pincode" />
+            </div>
+            <br/>
+            <label>Gender:</label>
+            <input type="radio" name="gender" value="Male" /> Male
+            <input type="radio" name="gender" value="Female" /> Female
+            <input type="radio" name="gender" value="Others" /> Others
+            <br/>
+            <br/>
+            <label>Choice of food: </label>
+            <input type="checkbox" name="food" value="Pizza" /> Pizza
+            <input type="checkbox" name="food" value="Burger" /> Burger
+            <input type="checkbox" name="food" value="Pasta" /> Pasta
+            <input type="checkbox" name="food" value="Sushi" /> Sushi
+            <input type="checkbox" name="food" value="Salad" /> Salad
+            <input type="checkbox" name="food" value="Juice" /> Juice
+            <br/>
+            <br/>
+            <label for="state">State: </label>
+            <input id="state" type="text" placeholder="State" />
+            <label for="country">Country:</label>
+                <select class="selectpicker countrypicker" id="country" data-flag="true" ></select>
+                <script>
+                    $('.countrypicker').countrypicker();
+                </script> 
+            <button type="submit">Submit</button>
+        </form>
+
+        <table id="dataTable">
+            <thead>
+                <tr>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Address</th>
+                    <th>Pincode</th>
+                    <th>Gender</th>
+                    <th>Food</th>
+                    <th>State</th>
+                    <th>Country</th>
+                </tr>
+            </thead>
+        </table>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
